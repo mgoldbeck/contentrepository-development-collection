@@ -104,7 +104,19 @@ composer install
 ```
 7. Add demo package `neos/demo` dependency
 ```
-"neos/neos-ui": "dev-event-sourced-patch as dev-master"
+"neos/demo": "dev-event-sourced as dev-master"
+```
+8. Add required `neos/fusion-afx` dependency
+```
+"neos/fusion-afx": "dev-master"
+```
+9. Add required `neos/contentrepository-development-collection` dependency
+```
+"neos/contentrepository-development-collection": "@dev"
+```
+10. Add required `neos/content-repository-dimensionspace` dependency
+```
+"neos/content-repository-dimensionspace": "dev-master"
 ```
 
 The resulting `composer.json` file should look something like this:
@@ -129,7 +141,8 @@ The resulting `composer.json` file should look something like this:
     "require": {
         "neos/neos-development-collection": "dev-event-sourced-patch as dev-master",
         "neos/flow-development-collection": "@dev",
-        "neos/demo": "@dev",
+        "neos/demo": "dev-event-sourced as dev-master",
+        "neos/fusion-afx": "dev-master",
 
         "neos/contentrepository-development-collection": "@dev",
         "neos/content-repository-dimensionspace": "dev-master",
